@@ -1,5 +1,5 @@
-var _USERNAME = "";
-var _API_KEY = "";
+var _USERNAME = process.env.FLIGHAWARE_USERNAME;
+var _API_KEY = process.env.FLIGHTAWARE_API_KEY;
 
 var _FXML_URL = "http://flightxml.flightaware.com/json/FlightXML2/";
 
