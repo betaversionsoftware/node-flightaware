@@ -1,6 +1,6 @@
 ## Flightaware API 
 
-[![Build Status](https://travis-ci.org/betaversionsoftware/node-flightaware.svg?branch=master)](https://travis-ci.org/betaversionsoftware/node-flightaware)
+[![Build Status](https://travis-ci.org/betaversionsoftware/node-flightaware.svg?branch=master)](https://travis-ci.org/betaversionsoftware/node-flightaware) [![Coverage Status](https://coveralls.io/repos/github/betaversionsoftware/node-flightaware/badge.svg?branch=master)](https://coveralls.io/github/betaversionsoftware/node-flightaware?branch=master)
 
 ### Install
 !!!NPM package not released yet
