@@ -1,4 +1,4 @@
-var _USERNAME = process.env.FLIGHAWARE_USERNAME;
+var _USERNAME = process.env.FLIGHTAWARE_USERNAME;
 var _API_KEY = process.env.FLIGHTAWARE_API_KEY;
 
 var _FXML_URL = "http://flightxml.flightaware.com/json/FlightXML2/";
@@ -25,10 +25,23 @@ exports.getAirport = function(code, callback) {
         })
     ).on("success", function(result, response) {
         if(result.AirportInfoResult) {
-            return callback(result.AirportInfoResult);
-        };
+            return callback({
+                result: result.AirportInfoResult,
+                code: response.statusCode
+            });
+        } else {
+            return callback(result);
+        }
+    }).on("fail", function(error, response) {
+        return callback({
+            error: error,
+            code: response.statusCode
+        });
     }).on("error", function(error, response) {
-        console.log(error);
+        return callback({
+            error: error,
+            code: response.statusCode
+        });
     });
 
 }
