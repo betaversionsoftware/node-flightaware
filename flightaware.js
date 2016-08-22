@@ -39,8 +39,7 @@ exports.getAirport = function(code, callback) {
         });
     }).on("error", function(error, response) {
         return callback({
-            error: error,
-            code: response.statusCode
+	    error: error.code
         });
     });
 
