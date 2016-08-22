@@ -37,6 +37,6 @@ AirportInfo returns information about an airport given an ICAO airport code such
 var flightaware = require('node-flightaware');
 
 flightaware.getAirport('YPPH', function(airport) {
-  consoloe.log(airport.result);
+  consoloe.log(airport);
 });
 ```

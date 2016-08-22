@@ -53,16 +53,16 @@ describe("Pull airport details (asynchronous)", function() {
         nock.cleanAll();
     });
     
-    it("given YPPH, should return code 200", function(done) {
+    it("given YPPH, should return Perth Airport details", function(done) {
         flightaware.getAirport("YPPH", function(airport) {
-            assert.equal(200, airport.code);
+            assert.deepEqual(expectedAirport, airport);
             done();
         });
     });
 
-    it("given YPPH, should return Perth Airport details", function(done) {
+    it("given YPPH, should return Perth Airport details without error", function(done) {
         flightaware.getAirport("YPPH", function(airport) {
-            assert.deepEqual(expectedAirport, airport.result);
+            assert.equal(false, (airport.error) ? true: false);
             done();
         });
     });

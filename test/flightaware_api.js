@@ -23,7 +23,7 @@ nock("http://bogus.flightaware.com/json/FlightXML2", {
     .query({
         airportCode: "YPPH"
     })
-    .replyWithError({error:"sdfgsfd"});
+    .replyWithError({error:"ENOTFOUND"});
 
 describe("Flightaware API test", function() {
 
@@ -38,7 +38,7 @@ describe("Flightaware API test", function() {
         });
     });
     
-    it("given API url, should return error", function(done) {
+    it("given bogus API url, should return error", function(done) {
         flightaware.setAPIUrl("http://bogus.flightaware.com/json/FlightXML2");
         flightaware.getAirport("YPPH", function(airport) {
             assert.deepEqual({error: "ENOTFOUND"}, airport);

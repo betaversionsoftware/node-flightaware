@@ -28,10 +28,7 @@ exports.getAirport = function(code, callback) {
         })
     ).on("success", function(result, response) {
         if(result.AirportInfoResult) {
-            return callback({
-                result: result.AirportInfoResult,
-                code: response.statusCode
-            });
+            return callback(result.AirportInfoResult);
         } else {
             return callback(result);
         }
