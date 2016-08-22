@@ -8,6 +8,9 @@ var _API_AIRPORT = "AirportInfo";
 
 var restclient = require("restler");
 
+exports.setAPIUrl = function(url) {
+    _FXML_URL = url;
+}
 
 exports.access = function(query) {
     return {
