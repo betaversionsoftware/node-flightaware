@@ -1,14 +1,17 @@
 {
   "name": "node-flightaware",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Flightaware API wrapper",
   "main": "flightaware.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "flighaware",
-    "flight"
+    "flightaware",
+    "flight",
+    "airport",
+    "aviation",
+    "api"
   ],
   "author": "Beta Version Software",
   "license": "MIT",
